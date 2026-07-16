@@ -1,0 +1,187 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openvoicegateway.org/schemas/music-intent-v1.schema.json",
+  "title": "OVG Music Intent v1",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "version",
+    "request_id",
+    "intent",
+    "payload"
+  ],
+  "properties": {
+    "version": {
+      "const": "1.0"
+    },
+    "request_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "session": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "intent": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "enum": [
+            "generate_music",
+            "revise_music",
+            "get_music_status",
+            "list_music_works"
+          ]
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "payload": {
+      "type": "object"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "intent": {
+            "properties": {
+              "name": {
+                "const": "generate_music"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "type": "object",
+            "required": [
+              "title",
+              "prompt"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120
+              },
+              "prompt": {
+                "type": "string",
+                "minLength": 5,
+                "maxLength": 4000
+              },
+              "lyrics": {
+                "type": "string",
+                "maxLength": 12000
+              },
+              "style_tags": {
+                "type": "string",
+                "maxLength": 500
+              },
+              "instrumental": {
+                "type": "boolean"
+              },
+              "quality": {
+                "enum": [
+                  "standard",
+                  "premium"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "intent": {
+            "properties": {
+              "name": {
+                "const": "revise_music"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "type": "object",
+            "required": [
+              "work_id",
+              "feedback"
+            ],
+            "properties": {
+              "work_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "feedback": {
+                "type": "string",
+                "minLength": 5,
+                "maxLength": 1000
+              },
+              "quality": {
+                "enum": [
+                  "standard",
+                  "premium"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "intent": {
+            "properties": {
+              "name": {
+                "const": "get_music_status"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "payload": {
+            "type": "object",
+            "required": [
+              "task_id"
+            ],
+            "properties": {
+              "task_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
