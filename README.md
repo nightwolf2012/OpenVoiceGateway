@@ -95,3 +95,24 @@ Phase 7:
 ## License
 
 Apache 2.0
+
+## Music Reference Application
+
+OVG Music / 声浪工坊 is the first proposed reference application for the OVG Intent Protocol. It turns requests from Siri, Gemini, AI agents, smart glasses, and car interfaces into provider-neutral music tasks.
+
+Supported intents:
+
+- `generate_music`
+- `revise_music`
+- `get_music_status`
+- `list_music_works`
+
+Resources:
+
+- [Proposed Suno Platform integration](docs/integrations/suno.md)
+- [Suno early-access brief](docs/applications/suno-early-access.md)
+- [Music intent JSON Schema](schemas/music-intent-v1.schema.json)
+- [Generate music example](examples/music/generate_music.json)
+- [Revise music example](examples/music/revise_music.json)
+
+Official Suno Platform access is pending. The public reference implementation exposes a provider-neutral OVG workflow at https://music.fireupfuture.cn/public/ovg.html. Any current independent provider adapter is isolated and clearly labeled as non-official; the official integration will use only Suno-issued credentials and documented endpoints after approval.

@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "request_id": "8a86b19f-ef23-4cb8-b985-d4a746be2f40",
+  "source": {
+    "platform": "siri",
+    "device": "iphone"
+  },
+  "session": {
+    "session_id": "creator-session-001"
+  },
+  "intent": {
+    "name": "generate_music",
+    "confidence": 0.98
+  },
+  "payload": {
+    "title": "Sea Breeze Reunion",
+    "prompt": "A warm and restrained Mandarin pop song about meeting again by the sea",
+    "lyrics": "",
+    "style_tags": "mandopop, warm, cinematic",
+    "instrumental": false,
+    "quality": "standard"
+  },
+  "metadata": {
+    "locale": "zh-CN",
+    "timezone": "Asia/Shanghai"
+  }
+}

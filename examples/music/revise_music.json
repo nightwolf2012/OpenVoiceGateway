@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "request_id": "c49dd4ff-1317-4a95-8c7e-2b3abbf7ab47",
+  "source": {
+    "platform": "gemini",
+    "device": "android"
+  },
+  "session": {
+    "session_id": "creator-session-001"
+  },
+  "intent": {
+    "name": "revise_music",
+    "confidence": 0.96
+  },
+  "payload": {
+    "work_id": "work_01JY8MQF3V9M6DCY9E9QT8WQX4",
+    "feedback": "Keep the chorus, increase the tempo, strengthen the drums, and shorten the ending",
+    "quality": "standard"
+  },
+  "metadata": {
+    "locale": "zh-CN",
+    "timezone": "Asia/Shanghai"
+  }
+}
