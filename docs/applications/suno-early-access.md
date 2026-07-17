@@ -4,8 +4,8 @@
 
 Product name: OpenVoiceGateway Music / 声浪工坊
 Repository: https://github.com/nightwolf2012/OpenVoiceGateway
-Stage: Working private beta; official Suno access pending
-Public demo: https://music.fireupfuture.cn/public/ovg.html (deployment pending)
+Stage: Working public technical demo; official Suno access pending
+Public demo: https://music.fireupfuture.cn/public/ovg.html
 
 ## Short description
 
@@ -17,7 +17,7 @@ We are building the first music reference application for the open OVG intent pr
 
 A user can say, "Create a warm Chinese pop song for my livestream," receive a generated work, and later say, "Keep the chorus, increase the tempo, and shorten the ending." The request may begin on a phone and continue from a car, smart glasses, or desktop agent while remaining attached to the same authenticated task and version history.
 
-OVG solves orchestration: identity, intent normalization, authorization, quotas, audit trails, task status, and multi-device continuity. We want the official Suno API to provide the original music-generation capabilities. We will not scrape Suno, automate the consumer product, or use unofficial endpoints in the public integration.
+OVG solves orchestration: identity, intent normalization, authorization, quotas, audit trails, task status, and multi-device continuity. We want the official Suno API to provide the original music-generation capabilities. The official integration will use only Suno-issued credentials and documented endpoints. We will not scrape or automate the Suno consumer product. Any current independent provider adapter is isolated, clearly labeled as non-official, and will never be presented as the Suno Platform API.
 
 ## Why this is different
 
@@ -34,7 +34,7 @@ The same provider-neutral intent can move between Siri, Gemini, Home Assistant, 
 
 ## Current readiness
 
-- Egg.js and MongoDB reference application
+- Public HTTPS Egg.js and MongoDB reference application
 - User accounts and authenticated access
 - Lyrics generation through an isolated provider interface
 - Music tasks, polling, works, and natural-language revision
@@ -60,8 +60,6 @@ The initial pilot will be intentionally small and invitation-based, with per-use
 
 ## Before submission
 
-- Confirm the legal operator and contact email.
-- Complete public HTTPS deployment.
+- Confirm the application contact email and authority to apply for the legal operator.
 - Record a 60–90 second product walkthrough.
-- Verify privacy and copyright links without login.
 - Review every application answer before final submission.
