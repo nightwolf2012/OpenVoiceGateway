@@ -75,10 +75,10 @@ The integration will not include phone numbers, password hashes, payment data, u
 
 ## Reference implementation
 
-A working private-beta reference application already implements the OVG intent endpoint, user accounts, music tasks, natural-language revisions, work versioning, credits, competitions, and public legal pages. Its current public application mode uses a mock provider until official Suno Platform access is approved.
+A working public technical demo already implements the OVG intent endpoint, user accounts, music tasks, natural-language revisions, work versioning, credits, competitions, and public legal pages. Its current music provider is isolated behind a replaceable adapter and clearly labeled when non-official. The approved Suno adapter will remain disabled until Suno issues official platform credentials.
 
-Planned public demo:
+Public demo:
 
 https://music.fireupfuture.cn/public/ovg.html
 
-The demo URL remains pending until DNS and HTTPS deployment are complete.
+DNS, HTTPS, public legal pages, and the authenticated OVG boundary have been verified.
