@@ -115,4 +115,4 @@ Resources:
 - [Generate music example](examples/music/generate_music.json)
 - [Revise music example](examples/music/revise_music.json)
 
-Official Suno Platform access is pending. The public reference implementation uses a mock provider until approval and will not scrape the Suno consumer product or present unofficial services as the official Suno API.
+Official Suno Platform access is pending. The public reference implementation exposes a provider-neutral OVG workflow at https://music.fireupfuture.cn/public/ovg.html. Any current independent provider adapter is isolated and clearly labeled as non-official; the official integration will use only Suno-issued credentials and documented endpoints after approval.
